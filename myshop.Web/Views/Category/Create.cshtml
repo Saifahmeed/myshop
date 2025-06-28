@@ -1,6 +1,8 @@
 ﻿@model Category
 @{
-    ViewData["Title"] = "Create Category";
+    ViewBag.Title = "Category Management";
+    ViewBag.CardTitle = "Create Category";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
 }
 <a href="@Url.Action("Index", "Category")" class="btn btn-secondary mb-3">Back to Categories</a>
 <h2>Create Category</h2>
@@ -17,4 +19,8 @@
     <button type="submit" class="btn btn-primary">Create</button>
     <button type="reset" class="btn btn-secondary">Reset</button>
 </form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
 
